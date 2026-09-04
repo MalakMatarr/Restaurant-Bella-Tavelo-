@@ -1,0 +1,324 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title> Bella Tavelo </title>
+	
+	<link rel="stylesheet" href="css/global.css">
+	
+	<link rel="stylesheet" href="css/about.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+
+	<!-- NAVIGATION BAR -->
+	
+	<header class="navbar">
+	
+		<div class="nav-container">
+		
+			<div class="brand"> Bella Tavelo </div>
+		
+			<nav class="nav-links">
+			
+				<a href="homepage.jsp"> Home </a>
+				
+				<a href="MenuServlet"> Menu </a>			
+				
+				<a class="active" href="about.jsp"> About </a>
+				
+				<a href="contact.jsp"> Contact </a>			
+				
+				<a href="faq.jsp"> FAQ </a>		
+				
+			</nav>
+	
+			<%
+				String userName = (String) session.getAttribute("userName");
+			%>
+			
+			<div class="nav-buttons">
+			
+			    <% if (userName != null) { %>
+			
+			        <span class="welcome-text">Hi, <%= userName %></span>
+			        
+			        <a href="MyOrders" class="login-btn">My Orders</a>
+
+			        <a href="LogoutServlet" class="login-btn">Logout</a>
+			
+			    <% } else { %>
+			
+			        <a href="login.html" class="login-btn">Login / Register</a>
+			
+			    <% } %>
+			
+			    <a href="cart.jsp" class="cart-btn" aria-label="View cart">
+
+			        <span class="material-symbols-outlined">shopping_cart</span>
+
+			    </a>
+			
+			</div>
+			
+		</div>
+	
+	</header>
+
+
+
+	<main>
+	
+	    <!-- HERO BANNER -->
+	    
+	    <section class="about-hero">
+	    
+	    
+	        <div class="about-hero-image"></div>
+	    
+	        <div class="about-hero-overlay"></div>
+	
+	        <div class="about-hero-content glass-card">
+	        
+	            <h1> Our Story </h1>
+	        
+	            <p> Authenticity in every bite, modern elegance in every moment. </p>
+	        
+	        </div>
+	        
+	    </section>
+	    
+	    
+	
+	    <!-- STORY AND MISSION -->
+	    
+	    <section class="about-section container">
+	    
+	        <div class="about-bento-grid">
+	
+	            <article class="story-card card-hover story-block">
+	                
+	                <h2> A Legacy of Flavor </h2>
+	                
+	                
+	                <div class="story-text">
+	                   
+	                    <p>
+	                        Founded on the principles of traditional Italian hospitality, Bella Tavelo began as a quiet
+	                        vision to bring the soulful cooking of our ancestors into a contemporary, refined setting.
+	                    </p>
+	                    
+	                    <p>
+	                        We source only the finest ingredients, often relying on local purveyors who share our commitment
+	                        to sustainability and excellence. Every dish is a testament to the tactile joy of handmade pasta
+	                        and slow-simmered sauces, presented with minimalist precision.
+	                    </p>
+	              
+	                </div>
+	            
+	            </article>
+	
+	            <article class="mission-card card-hover">
+	               
+	                <div>
+	               
+	                    <span class="material-symbols-outlined mission-icon">restaurant</span>
+	               
+	                    <h3>Our Mission</h3>
+	               
+	                </div>
+	               
+	                <p>
+	                    To craft memorable dining experiences through 
+	                    culinary authenticity, warm service, and 
+	                    an environment that celebrates modern elegance.
+	               
+	                </p>
+
+	            </article>
+	
+	            <div class="vision-image card-shadow"> 
+	            
+	                <img src="images/stock6.png">
+	            
+	            </div>
+	
+	            <article class="story-card card-hover vision-text">
+	            
+	                <h3> The Vision </h3>
+	            
+	                <p>
+	                    We envision a space where the simplicity of a perfect meal fosters connection. 
+	                    Bella Tavelo is designed to be an oasis of calm—a gallery where food is the art, 
+	                    and every guest is treated with the warmth of family.
+	            
+	                </p>
+	                
+	            </article>
+	
+	        </div>
+	        
+	    </section>
+	    
+	    
+	
+	    <!-- CHEFS -->
+	    
+	    <section class="artisans-section">
+	    
+	        <div class="container">
+	    
+	            <div class="section-title">
+	    
+	                <h2> Meet Our Artisans </h2>
+	    
+	                <p> The hands and hearts behind the menu. </p>
+	    
+	            </div>
+	
+	            <div class="chef-grid">
+	
+	                <article class="chef-card card-hover">
+	                
+	                    <div class="chef-image">
+	                
+	                        <img src="images/enricobartolini.jpg">
+	                    </div>
+	                    
+	                    <div class="chef-info">
+	                    
+	                        <h4> Enrico Bartolini </h4>
+	      
+	                        <span> Head Chef </span>
+	      
+	                        <p> The master of precision, bringing flawless execution and consistency. </p>
+	      
+	                    </div>
+	                    
+	                </article>
+	
+	                <article class="chef-card card-hover">
+	                
+	                    <div class="chef-image">
+	                    
+	                        <img src="images/massimobottura.jpg">
+	                        
+	                    </div>
+	                    
+	                    <div class="chef-info">
+	                    
+	                        <h4> Massimo Bottura </h4>
+	                    
+	                        <span> Executive Chef </span>
+	                    
+	                        <p> The creative visionary rewriting the rules of tradition with avant-garde passion. </p>
+	                   
+	                    </div>
+	                    
+	                </article>
+	
+	                <article class="chef-card card-hover">
+	                
+	                    <div class="chef-image">
+	                
+	                        <img src="images/carlocracco.jpg">
+	                        
+	                    </div>
+	                    
+	                    <div class="chef-info">
+	                     
+	                        <h4> Carlo Cracco</h4>
+	                     
+	                        <span> Culinary Ambassador </span>
+	                     
+	                        <p> The icon curating the perfect bridge between modern flavor and elegant dining. </p>
+	                    
+	                    </div>
+	                
+	                </article>
+	
+	            </div>
+	            
+	        </div>
+	        
+	    </section>
+	
+	
+	
+	    <!-- GALLERY -->
+	    
+	    <section class="about-section container">
+	    
+	        <div class="section-title">
+	    
+	            <h2> The Experience </h2>
+	    
+	            <p> A glimpse into our ambiance. </p>
+	    
+	        </div>
+	
+	        <div class="gallery-grid"> 
+	        
+	            <div class="gallery-item gallery-large card-shadow">
+	        
+	                <img
+	                    src="images/stock2.jpg">
+	            </div>
+	
+	            <div class="gallery-item card-shadow">
+	                <img
+	                    src="images/stock5.jpg">
+	            </div>
+	
+	            <div class="gallery-item gallery-tall card-shadow">
+	                <img
+	                    src="images/stock3.png">
+	            </div>
+	
+	            <div class="gallery-item card-shadow">
+	                <img
+	                    src="images/stock4.png">
+	            </div>
+	            
+	        </div>
+	        
+	    </section>
+	
+	</main>
+
+
+
+	<!-- FOOTER -->
+	
+	<footer>
+	
+	    <div class="footer-container">
+	
+	        <div class="footer-bottom"> Group 09 © 2026 </div>
+	
+	        <div class="footer-links">
+	        
+	            <a href="privacypolicy.html"> Privacy Policy </a>
+	        
+	            <a href="termsandservices.html"> Terms & Services </a>
+	            
+	        </div>
+	
+	    </div>
+	
+	</footer>
+
+</body>
+
+</html>

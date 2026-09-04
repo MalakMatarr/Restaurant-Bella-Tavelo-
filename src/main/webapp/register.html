@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bella Tavelo</title>
+
+    <link rel="stylesheet" href="css/global.css">
+
+    <link rel="stylesheet" href="css/register.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <script src="js/registerValidation.js" defer></script>
+
+</head>
+
+
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <div class="brand"> Bella Tavelo </div>
+
+            <nav class="nav-links">
+
+                <a href="homepage.jsp"> Home </a>
+
+                <a href="MenuServlet"> Menu </a>
+
+                <a href="about.jsp"> About </a>
+
+                <a href="contact.jsp"> Contact </a>
+
+                <a href="faq.jsp"> FAQ </a>
+
+            </nav>
+
+            <div class="nav-buttons">
+
+                <a class="login-btn active" href="login.html"> Login / Register </a>
+
+                <a href="cart.jsp" class="cart-btn" aria-label="View cart">
+				    <span class="material-symbols-outlined">shopping_cart</span>
+				</a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- REGISTER -->
+
+    <main class="register-main">
+
+        <section class="register-section container">
+
+            <!-- LEFT SIDE -->
+
+            <div class="register-card">
+
+                <span class="register-tag"> Bella Tavelo </span>
+
+                <h1> Benvenuto! </h1>
+
+                <h3> Create Your Account </h3>
+                
+                <div id="message"></div>
+
+                <p>
+                    Join Bella Tavelo to order authentic Italian cuisine,
+                    save your favourite dishes, and enjoy a seamless dining experience.
+                </p>
+
+                <form id="registerForm" action="RegisterServlet" method="post">
+
+                    <div class="form-group">
+
+                        <label for="fullName"> Full Name </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email"> Email Address </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="phone"> Phone Number </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="password"> Password </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword"> Confirm Password </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            required>
+
+                    </div>
+
+                    <button type="submit" class="register-submit-btn">
+
+                        Register
+
+                    </button>
+
+                </form>
+
+                <div class="register-footer">
+
+                    <p>
+
+                        Already have an account?
+
+                        <a href="login.html">
+
+                            Login
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="register-image">
+
+                <div class="register-overlay"></div>
+
+                <div class="register-image-content">
+
+                    <span> Authentic Italian Dining </span>
+
+                    <h2>
+                        Join The Bella
+                        Tavelo Family
+                    </h2>
+
+                    <p>
+                        Experience handcrafted Italian cuisine,
+                        exclusive offers, and a faster ordering experience
+                        with your personal account.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-bottom">
+
+                Group 09 © 2026
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="privacypolicy.html">
+
+                    Privacy Policy
+
+                </a>
+
+                <a href="termsandservices.html">
+
+                    Terms & Services
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+
+/* ---------- Sticky footer ---------- */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+  
+    background:
+        radial-gradient(circle at 12% 12%, rgba(46, 125, 50, .10), transparent 24%),
+        radial-gradient(circle at 88% 18%, rgba(131, 0, 11, .15), transparent 26%),
+        linear-gradient(180deg, var(--dark) 0%, var(--dark-2) 42%, #181310 100%) !important;
+    background-attachment: fixed !important;
+    color: #f4ede2 !important;
+}
+
+
+body > .container {
+    flex: 1 0 auto;
+}
+body > footer {
+    flex-shrink: 0;
+}
+
+/* ---------- Headings ---------- */
+.container h2 {
+    font-family: "Playfair Display", serif;
+    color: #fff8ed;
+}
+
+/* ---------- Cards (Bootstrap .card, used for checkout/order boxes) ---------- */
+.card {
+    background: linear-gradient(180deg, rgba(33, 27, 23, .96), rgba(21, 17, 15, .96));
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    color: #f4ede2;
+}
+.card .card-title {
+    color: #fff8ed;
+    font-family: "Playfair Display", serif;
+}
+.card .text-muted {
+    color: rgba(255, 244, 230, .6) !important;
+}
+
+/* ---------- Tables (.table, .cart-table) ---------- */
+.table {
+    color: #f4ede2;
+}
+.table > :not(caption) > * > * {
+    background-color: transparent;
+    color: #f4ede2;
+    border-bottom-color: rgba(255, 255, 255, .08);
+}
+.table thead.table-light th {
+    background-color: rgba(255, 255, 255, .04);
+    color: #fff8ed;
+    border-color: rgba(255, 255, 255, .08);
+}
+.cart-table th,
+.cart-table td {
+    vertical-align: middle;
+}
+
+/* ---------- List group (order summary on checkout.jsp) ---------- */
+.list-group-item {
+    background-color: transparent;
+    color: #f4ede2;
+    border-color: rgba(255, 255, 255, .08) !important;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--gold);
+}
+.btn-success {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-success:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--gold);
+}
+.btn-outline-secondary {
+    color: #f4ede2;
+    border-color: rgba(255, 255, 255, .3);
+}
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .08);
+    border-color: var(--gold);
+}
+.btn-outline-danger {
+    color: var(--red-soft);
+    border-color: var(--red-soft);
+}
+.btn-outline-danger:hover {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* ---------- Alerts ---------- */
+.alert-success {
+    background-color: rgba(46, 125, 50, .14);
+    border-color: rgba(46, 125, 50, .4);
+    color: #b7e6ba;
+}
+.alert-danger {
+    background-color: rgba(131, 0, 11, .14);
+    border-color: rgba(131, 0, 11, .4);
+    color: #f2a2a8;
+}
+.alert-warning {
+    background-color: rgba(212, 175, 55, .14);
+    border-color: rgba(212, 175, 55, .4);
+    color: #f4d36d;
+}
+
+/* ---------- Form controls (checkout.jsp inputs) ---------- */
+.form-control,
+.form-select {
+    background-color: #1c1714;
+    border: 1px solid rgba(255, 255, 255, .1);
+    color: #fff8ed;
+}
+.form-control::placeholder {
+    color: rgba(255, 240, 222, .4);
+}
+.form-control:focus,
+.form-select:focus {
+    background-color: #1c1714;
+    color: #fff8ed;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, .15);
+}
+.form-label {
+    color: #f6ebda;
+}
+.form-check-label {
+    color: #f4ede2;
+}
+.qty-input {
+    width: 70px;
+}
+
+/* ---------- Badges (order status on myOrders.jsp) ---------- */
+.badge.bg-secondary {
+    background-color: rgba(212, 175, 55, .18) !important;
+    color: #f4d36d;
+}
+
+/* ---------- Order confirmation ---------- */
+.confirmation-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: rgba(46, 125, 50, .18);
+    color: #6fcf73;
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+#cardFields.d-none {
+    display: none !important;
+}
+.text-muted {
+    color: rgba(255, 244, 230, .6) !important;
+}
+
+/* ---------- Mobile responsive table stacking ---------- */
+@media (max-width: 576px) {
+    .cart-table thead {
+        display: none;
+    }
+
+    .cart-table, .cart-table tbody, .cart-table tr, .cart-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .cart-table tr {
+        margin-bottom: 1rem;
+        border: 1px solid rgba(255, 255, 255, .08);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .cart-table td {
+        text-align: right;
+        padding-left: 45%;
+        position: relative;
+    }
+
+    .cart-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0.75rem;
+        font-weight: 600;
+        text-align: left;
+        color: #fff8ed;
+    }
+}
